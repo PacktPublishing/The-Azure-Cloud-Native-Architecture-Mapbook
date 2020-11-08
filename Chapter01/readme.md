@@ -1,5 +1,6 @@
 In this chapter, we will describe how the various maps in this book are built, what they intend to demonstrate, and how to make sense of them. After that, we will focus on what an architect role is about, and explain the various cloud service models that are made available by the Microsoft Azure platform. 
 More specifically, in this chapter we will cover the following topics:
+
 •	About the Azure Architecture Maps
 
 •	Mapping the Azure cloud architectures
