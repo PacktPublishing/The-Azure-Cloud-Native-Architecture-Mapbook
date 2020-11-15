@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {    
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Specifies the Azure location where the key vault should be created."
+      }
+    },
+    "serverFarmId":{
+        "type":"string",
+        "metadata":{
+            "description":"the identifier of the app service plan"
+        }
+    },  
+    "appName": {
+      "type": "string"
+    }
+  },  
+  "resources": [    
+    {
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('appName')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "type": "Microsoft.Web/sites",
+      "location": "[parameters('location')]",
+      "tags": {
+        "displayName": "Website"
+      },
+      "properties": {
+        "clientAffinityEnabled": false,
+        "httpsOnly": true,
+        "siteConfig": {
+          "remoteDebuggingEnabled": false          
+        },
+        "name": "[parameters('appName')]",
+        "serverFarmId": "[parameters('serverFarmId')]"
+     }
+    }
+  ],
+  "outputs": {
+    "principalId": {
+      "type": "string",
+      "value": "[reference(concat('Microsoft.Web/sites/', parameters('appName')), '2019-08-01', 'Full').identity.principalId]"
+    }
+  }
+}

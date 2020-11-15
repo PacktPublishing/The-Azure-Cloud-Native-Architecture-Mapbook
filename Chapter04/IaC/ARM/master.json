@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    
+    "hostingPlanName": {
+      "type": "string",
+      "metadata": {
+        "description": "Pricing tier"
+      }
+    },    
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Specifies the Azure location where the resources should be created."
+      }
+    },
+    "appName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the function app that you wish to create."
+      }
+    }
+  },
+  "resources": [    
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2018-05-01",          
+      "name": "app-service-plan-deployment",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://packtmapbook.blob.core.windows.net/templates/app-service-plan.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "hostingPlanName": {
+            "value": "[parameters('hostingPlanName')]"
+          }
+        }
+      }
+    },   
+
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2018-05-01",   
+      "dependsOn": [
+        "app-service-plan-deployment"        
+      ],
+      "name": "app-service-deployment",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://packtmapbook.blob.core.windows.net/templates/app-service.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "appName": {
+            "value": "[parameters('appName')]"
+          },
+          "serverFarmId": {
+            "value": "[reference('app-service-plan-deployment').outputs.serverFarmId.value]"
+          }       
+        }
+      }
+    }
+  ]
+}
