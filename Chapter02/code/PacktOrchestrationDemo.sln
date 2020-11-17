@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktOrchestrationDemo", "PacktOrchestrationDemo\PacktOrchestrationDemo.csproj", "{E8D22673-BAA7-4AA5-91A5-08C2E83F880E}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8D22673-BAA7-4AA5-91A5-08C2E83F880E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D22673-BAA7-4AA5-91A5-08C2E83F880E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D22673-BAA7-4AA5-91A5-08C2E83F880E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D22673-BAA7-4AA5-91A5-08C2E83F880E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E44ACE8-AF06-4C6C-BEC3-4D0D78C0773C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E44ACE8-AF06-4C6C-BEC3-4D0D78C0773C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E44ACE8-AF06-4C6C-BEC3-4D0D78C0773C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E44ACE8-AF06-4C6C-BEC3-4D0D78C0773C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E04BE7B6-EC15-4F22-ADEC-67354762A697}
+	EndGlobalSection
+EndGlobal

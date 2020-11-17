@@ -1,0 +1,18 @@
+{
+  "isRewindable": true,
+  "defaultStepTimeOut": 5,
+  "steps": [
+    {
+      "stepName": "step1",
+      "maxRetryCount": 1,
+      "stopFlowOnFailure": true,
+      "timeOut": 5
+    },
+    {
+      "stepName": "step2",
+      "maxRetryCount": 0,
+      "stopFlowOnFailure": false,
+      "timeOut": 3
+    }
+  ]
+}
