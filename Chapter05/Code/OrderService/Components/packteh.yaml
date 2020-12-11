@@ -1,0 +1,16 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  namespace: azug
+  name: dapreh
+spec:
+  type: pubsub.azure.eventhubs
+  metadata:
+  - name: connectionString
+    value: <yourconnectionstring>;EntityPath=dapreh
+  - name: storageAccountName
+    value: <yoursaname>
+  - name: storageAccountKey
+    value: <yoursakey>
+  - name: storageContainerName
+    value: packt
