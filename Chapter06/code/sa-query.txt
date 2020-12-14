@@ -1,0 +1,20 @@
+WITH   
+OK AS  
+(  
+  SELECT sensorName,count(*) as TotalUnderMaxSpeed
+  FROM hub  
+  WHERE speed  <= 50
+  GROUP BY sensorName,
+  TumblingWindow(second,10)
+),  
+NOK AS  
+(  
+  SELECT sensorName,count(*) as TotalOverMaxSpeed
+  FROM hub  
+  WHERE speed  > 50
+  GROUP BY sensorName,
+  TumblingWindow(second,10)
+)
+SELECT OK.sensorName, OK.TotalUnderMaxSpeed,NOK.TotalOverMaxSpeed INTO powerbi from OK INNER JOIN NOK ON NOK.sensorName=OK.sensorName
+AND DATEDIFF(second, OK, NOK) BETWEEN 0 AND 10
+SELECT * INTO fine FROM hub WHERE speed > 50
