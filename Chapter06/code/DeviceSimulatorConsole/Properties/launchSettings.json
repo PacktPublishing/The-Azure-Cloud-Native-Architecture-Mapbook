@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DeviceSimulatorConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "8"
+    }
+  }
+}
