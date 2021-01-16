@@ -1,0 +1,1 @@
+This example is only to show how to read the changefeed of CosmosDB. For an actual event store, you should use aggregates, aggregate root etc. The event class used in this example is by no means representative of a real event payload
