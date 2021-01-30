@@ -14,3 +14,7 @@ The CLI also has some breaking changes. In the book, you will see a series of da
 You should get rid of the --port flag which does not exist anymore. Dapr will find a port by itself. So, the above command should simply be:
 
     dapr run --app-id order --components-path ./components --app-port 5002 dotnet run
+
+For the order query service, you should start it this way:
+
+    dapr run --app-id orderquery --components-path ./components --app-port 5000 dotnet run
