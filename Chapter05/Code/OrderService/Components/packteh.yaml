@@ -1,7 +1,6 @@
 apiVersion: dapr.io/v1alpha1
 kind: Component
-metadata:
-  namespace: default
+metadata:  
   name: dapreh
 spec:
   type: pubsub.azure.eventhubs
