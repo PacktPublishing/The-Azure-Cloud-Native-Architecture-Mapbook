@@ -61,3 +61,7 @@ Stephane Eyskens is an Azure Solution Architect and a Digital Transformation adv
 Ed Price is a Senior Program Manager in Engineering at Microsoft, with an MBA in technology management. He leads Microsoft's efforts to publish Reference Architectures on the Azure Architecture Center. Previously, he drove datacenter deployment and customer feedback, and he ran Microsoft's customer feedback programs for Azure development, Service Fabric, IoT, Functions, and Visual Studio. He was also a technical writer at Microsoft for 6 years and helped lead TechNet Wiki. He is the co-author of five books, including Learn to Program with Small Basic and ASP.NET Core 5 for Beginners from Packt.
 
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781800562325">https://packt.link/free-ebook/9781800562325 </a> </p>
